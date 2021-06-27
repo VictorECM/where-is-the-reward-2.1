@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rewards Program Analysis | Where is the Reward? - Predictive Analysis</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- MachineLearning CSS -->
+    
+
+    <!-- MDI -->
+    <link rel="stylesheet" href="http://cdn.materialdesignicons.com/3.8.95/css/materialdesignicons.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbar10">
+                    <ul class="navbar-nav nav-fill w-100">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="/">Intro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="brief.html">Brief</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="maps.html">Maps</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-bold" href="machineLearning.html">Predictive Analysis</a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="dashboard.html">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+  
+        
+        <body lang=en-MX style='word-wrap:break-word'>
+        
+        <div class=WordSection1>
+        
+        <p class=MsoNormal><b><span lang=ES>Clustering Analysis</span></b></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        <p class=MsoNormal><span lang=ES>Currently, the company has grouped its clients in 6 categories, 
+            the objective of this analysis is to determine if it is necessary to modify them.</span></p>
+        
+        <p class=MsoNormal><span lang=ES>For the present analysis, 
+            unsupervised "K-Means" method was used. This algorithm seeks to cluster 
+            data by their related characteristics.</span></p>
+
+        <p class=MsoNormal><span lang=ES>To determine of the optimal number of 
+            clusters the <b>Elbow Method</b> was used.</span></p>
+               
+        <p class=MsoNormal><span lang=ES>As a general premise, it´s evident that customers 
+            with few sales are very costly in points.
+             The objective of the program should be that with more sales, 
+             more points they should gain to get a fair reward for sales:</span></p>
+        <div class ="container">
+        <img src="../machineLearning/image/4Cl_totsales_pointsworth.png" width=400 height=350 
+        
+        alt="Chart, scatter chart, bubble chart&#10;&#10;Description automatically generated">
+        </div>
+        <p class=MsoNormal>&nbsp;</p>
+        
+        <p class=MsoNormal><b><span lang=ES>Total Sales vs Average Sales per Month</span></b></p>
+        
+        <p class=MsoNormal><span lang=ES>The first exercise is defining the groups based on the sales each Customer has had, 
+            viewed from 2 approaches, the total sales: from 2018 to 2020, 
+            <br>and the average sales amount per month as there
+             are new customers who have fewer months in the program, and it would be "unfair" to compare it to a customer who 
+             has been permanent in the scheme.</span></p>
+        
+        <p class=MsoNormal><img src="../machineLearning/image/elbow_method_vtot_vmens.png" width=400 height=350 
+        
+        alt="Chart, line chart&#10;&#10;Description automatically generated"><span
+        lang=ES>The optimal number of clusters with these two variables <b>is set to 3</b> by the elbow method.</span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        <p class=MsoNormal><img src="../machineLearning/image/3Cl_vtot_vmens.png" width=400 height=350 id="Picture 14"
+        
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 11"
+        src="../machineLearning/image/4Cl_vtot_vmens.png"
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 15"
+        src="../machineLearning/image/5Cl_vtot_vmens.png"
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 16"
+        src="../machineLearning/image/6Cl_vtot_vmens.png"
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"></p>
+        
+        <p class=MsoNormal>&nbsp;</p>
+        
+        <p class=MsoNormal><span lang=ES>In conclusion, there is no obvious clustering of customers by distributor,customers could be reorganized and the definition of categories can be simplified from <b>6 to 3.</b> </span></p>
+        
+        <p class=MsoNormal><span lang=ES><b>Group 1:</b> Customers with average monthly sales greater than <b>250 thousand pesos.</b></span></p>
+        
+        <p class=MsoNormal><span lang=ES><b>Group 2:</b> Customers with average monthly sales of less than <b>250 thousand pesos</b>
+             and accumulated sales in the program of more than <b>2.5 million pesos.</b></span></p>
+        
+        <p class=MsoNormal><span lang=ES><b>Group 3:</b> Customers with average monthly sales of less than <b>250 thousand pesos</b> 
+            and accumulated sales in the program of less than <b>2.5 million pesos.</b></span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        <p class=MsoNormal><span lang=ES>To confirm clustering, a Dendrogram (graphical representation) was additionally made; 
+            it confirms the number of customer groups in <b>3:</b></span></p>
+        
+        <p class=MsoNormal><span lang=ES><img width=400 height=350 id="Picture 17"
+        src="../machineLearning/image/Dendogram.png"
+        alt="Chart&#10;&#10;Description automatically generated"></span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        <p class=MsoNormal><b><span lang=ES>Analysis of Distributors and Customers</span></b></p>
+        
+        <p class=MsoNormal><span lang=ES>Currently there are 15 distributors, thus a second analysis was made to determine if it is 
+            relevant to modify the distributor category, in this case the optimal number of groups <b>is again 3.</b></span></p>
+        
+        <p class=MsoNormal><span lang=ES><img width=400 height=350 id="Picture 18"
+        src="../machineLearning/image/elbow_method_dist_vmens.png"
+        alt="Chart, line chart&#10;&#10;Description automatically generated"></span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+       
+         <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+
+        <p class=MsoNormal><b><span lang=ES>Distributor Groups vs. Average Monthly Sales and Total Sales</span></b></p>
+        
+        <p class=MsoNormal><span lang=ES><img width=400 height=350 id="Picture 23"
+        src="../machineLearning/image/3Cl_dist_vmens.png"
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 24" src="../machineLearning/image/4Cl_dist_vmens.png"
+        alt="Chart, scatter chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 25" src="../machineLearning/image/5Cl_dist_vmens.png"
+        alt="Chart, scatter chart, bubble chart&#10;&#10;Description automatically generated"><img
+        width=400 height=350 id="Picture 26"
+        src="../machineLearning/image/6Cl_dist_vmens.png"
+        alt="Chart, scatter chart, bubble chart&#10;&#10;Description automatically generated"></span></p>
+        
+        <p class=MsoNormal><span lang=ES>&nbsp;</span></p>
+        
+        
+        
+        </div>
+        
+        </body>
+        
+     
+        
+    
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav .nav-item').click(function () {
+                $('.navbar-nav .nav-item').removeClass('active');
+                $(this).addClass('active');
+            })
+        });
+    </script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    
+    
+    
+</body>
+
+</html>
